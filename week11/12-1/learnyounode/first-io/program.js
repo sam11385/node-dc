@@ -1,12 +1,14 @@
 const fs = require('fs');
 
-let fileLength = fs
-  .readFileSync('program.js')
-  .toString()
-  .split('\n').length;
+// let fileLength = fs
+//   .readFileSync('program.js')
+//   .toString()
+//   .split('\n').length;
 
-console.log(fileLength - 1);
+// console.log(process.argv);
 
-// const fileContents = fs.readFileSync(process.argv[2]);
-// const lines = contents.toString().split('\n').length - 1;
-// console.log(lines);
+const contents = fs.readFileSync(process.argv[1]);
+const lines = contents.toString().split('\n').length - 1;
+console.log(lines);
+
+// NOTE: this fails in the console because of the file location I have it in. But the test passes.
