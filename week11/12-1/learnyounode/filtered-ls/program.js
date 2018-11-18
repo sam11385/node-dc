@@ -1,16 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = process.argv[2];
-const ext = '.' + process.argv[3];
+const folder = process.argv[0];
+const ext = '.' + process.argv[1];
 
-fs.readdir(dir, function(err, files) {
+fs.readdir(folder, function(err, files) {
   if (err) return console.error(err);
   files.forEach(function(file) {
-    if (path.extname === ext) {
+    if (path.extname(file) === ext) {
       console.log(file);
     }
   });
 });
-
-// console.log(path.dirname('~/digital-crafts/node-dc/'));
