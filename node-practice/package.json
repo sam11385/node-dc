@@ -1,0 +1,13 @@
+{
+  "name": "NodePracticeApp",
+  "version": "0.0.0",
+  "description": "NodejsConsoleApp",
+  "main": "program.js",
+  "author": {
+    "name": "Dev",
+    "email": "samluedke@gmail.com"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
