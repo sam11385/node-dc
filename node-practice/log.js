@@ -1,4 +1,4 @@
-// create something we would want to reuse
+// create something we would want to reuse - such as a logging function
 const log = {
   info: function(info) {
     console.log(`Info:  ${info}`);
