@@ -1,3 +1,4 @@
+// create something we would want to reuse
 const log = {
   info: function(info) {
     console.log(`Info:  ${info}`);
@@ -10,4 +11,5 @@ const log = {
   }
 };
 
+// Export using global module object from node
 module.exports = log;
