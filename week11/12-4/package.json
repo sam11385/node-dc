@@ -9,6 +9,7 @@
   "author": "Sam Luedke",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "speed-test": "^2.0.0"
   }
 }
