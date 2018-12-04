@@ -1,3 +1,10 @@
 const robot = require('robotjs');
 
-console.log(robot.dragMouse(1, 1));
+// Type "Hello World".
+robot.typeString('Hey DigitalCrafts');
+
+// Get mouse position.
+let mouse = robot.getMousePos();
+
+// Get pixel color in hex format.
+//console.log('Mouse: ' + ' at x:' + mouse.x + ' y:' + mouse.y);
