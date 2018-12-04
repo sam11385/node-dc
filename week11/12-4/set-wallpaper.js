@@ -1,4 +1,5 @@
 const axios = require('axios');
+const wallpaper = require('wallpaper');
 
 axios
   .get('https://dog.ceo/api/breeds/image/random')
@@ -8,3 +9,5 @@ axios
   .catch(function(error) {
     console.log(error);
   });
+
+// console.log(wallpaper.screens);
