@@ -1,13 +1,18 @@
 const axios = require('axios');
 const wallpaper = require('wallpaper');
+const download = require('download-file');
 
-axios
-  .get('https://dog.ceo/api/breeds/image/random')
-  .then(function(response) {
-    console.log(response.data.message);
-  })
-  .catch(function(error) {
-    console.log(error);
+const url = 'https://dog.ceo/api/breeds/image/random';
+
+const options = {
+  directory: './',
+  filename: ''
+};
+
+axios.get(url).then(function(response) {
+  const image = response.data.message;
+  download(image, options, function(err) {
+    if (err) throw err;
+    wallpaper.set(options.filename);
   });
-
-// console.log(wallpaper.screens);
+});
