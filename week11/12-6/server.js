@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 // Use the get function to set a route
-app.get('/home', function(request, response) {
+app.get('/', function(request, response) {
   response.send('Hello Digital Crafts 💪💪💪💪💪💪💪💪 wooooo');
 });
 
