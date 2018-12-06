@@ -1,9 +1,15 @@
-const http = require('http');
-const fs = require('fs');
+// Require express from NPM
 const express = require('express');
 
+// Get an application instance with the app variable
 const app = express();
 
-const server = http.createServer(app);
-console.log('Listening on http://127.0.0.1:8080');
-server.listen('8080', '127.0.0.1');
+// Set a variable for our port
+const port = 3000;
+
+// Use the get function to set a route
+app.get('/home', function(request, response) {
+  response.send('Hello Digital Crafts 💪💪💪💪💪💪💪💪 wooooo');
+});
+
+app.listen(port);
