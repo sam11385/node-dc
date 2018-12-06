@@ -1,20 +1,23 @@
-// Require express from NPM
 const express = require('express');
 const app = express();
 const port = 3000;
 
-const count = 0;
+// Set initial value for count
+let count = 0;
 
 app.post('/increment', function(request, response) {
-  response.send(count++);
+  count++;
+  response.send(`Count: ${count}`);
 });
 
 app.post('/decrement', function(request, response) {
-  response.send(count--);
+  count--;
+  response.send(`Count: ${count}`);
 });
 
 app.get('/value', function(request, response) {
-  response.send(count);
+  response.send(`Count: ${count}`);
+  response.end();
 });
 
 app.listen(port);
